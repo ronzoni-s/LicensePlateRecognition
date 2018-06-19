@@ -1,0 +1,33 @@
+﻿<Window x:Class="BlurBehindDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Login" Height="296.186" Width="500"
+		Background="#12000000"
+		AllowsTransparency="True"
+		WindowStyle="None"
+		BorderThickness="3"
+		BorderBrush="Gray"
+		WindowStartupLocation="CenterScreen"
+		Loaded="Window_Loaded"
+        MouseDown="Window_MouseDown"
+        >
+    <Grid RenderTransformOrigin="0.498,0.527">
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="64" Foreground="Black" Margin="161,10,158,0">
+			Log in
+        </TextBlock>
+        <Label Content="Username" FontSize="10"  VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="116,93,0,0" VerticalAlignment="Top" Height="21"/>
+        <Image Source="{StaticResource User}" Width="20" Height="20" Margin="91,119,383,151"/>
+        <TextBox Name="Username" Width="270" Height="30" VerticalContentAlignment="Center" HorizontalAlignment="Right" Margin="0,114,108,146"/>
+        <Label Content="Password" FontSize="10"  VerticalContentAlignment="Top" HorizontalAlignment="Left" VerticalAlignment="Top" Height="21" Margin="116,149,0,0"/>
+        <Image Source="{StaticResource Password}" Width="20" Height="20" HorizontalAlignment="left" VerticalAlignment="Bottom" Margin="91,0,0,95" />
+        <PasswordBox Name="Password" Width="270" Height="30" Margin="116,170,108,90" VerticalContentAlignment="Center"/>
+        <Button Name="Close" Width="30" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Background="Transparent" BorderThickness="0">
+            <Image Source="{StaticResource Exit}" Width="15" Height="15" />
+        </Button>
+        <Button Name="Minimize" Width="30" Height="30" Margin="434,0,30,260" Background="Transparent" BorderThickness="0">
+            <Image Source="{StaticResource Minimize}" Width="15" Height="15" />
+        </Button>
+        <Button Name="Submit" Content="Submit" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="75" Height="39" Margin="200,0,200,10" BorderBrush="Black" Background="White" FontSize="14"/>
+        <Label Name="Error" HorizontalAlignment="Left" Margin="116,205,0,0" VerticalAlignment="Top" Width="270" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="Red"/>
+    </Grid>
+</Window>
